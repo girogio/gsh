@@ -1,1 +1,0 @@
-/usr/bin/cc -rdynamic CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/gsh.c.o CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/lib/linenoise.c.o CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/proc.c.o CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/tokenizer.c.o -o gsh 

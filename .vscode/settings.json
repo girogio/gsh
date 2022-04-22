@@ -1,4 +1,3 @@
 {
-  "cmake.sourceDirectory": "${workspaceFolder}/bin",
-  "cmake.configureOnOpen": false
+  "cmake.sourceDirectory": "${workspaceFolder}/bin"
 }

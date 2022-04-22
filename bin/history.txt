@@ -1,4 +1,0 @@
-clear
-ls
-smoething | like | this lmao 
-exit

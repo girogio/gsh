@@ -1,3 +1,0 @@
-/home/grongo/Assignments/cps1012/bin/CMakeFiles/gsh.dir
-/home/grongo/Assignments/cps1012/bin/CMakeFiles/edit_cache.dir
-/home/grongo/Assignments/cps1012/bin/CMakeFiles/rebuild_cache.dir
