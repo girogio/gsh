@@ -35,7 +35,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#pragma once
+
 #ifndef __LINENOISE_H
 #define __LINENOISE_H
 
@@ -45,7 +45,6 @@
 extern "C" {
 #endif
 
-#include <stddef.h>
 typedef struct linenoiseCompletions {
   size_t len;
   char **cvec;
@@ -58,28 +57,18 @@ void linenoiseSetCompletionCallback(linenoiseCompletionCallback *);
 void linenoiseSetHintsCallback(linenoiseHintsCallback *);
 void linenoiseSetFreeHintsCallback(linenoiseFreeHintsCallback *);
 void linenoiseAddCompletion(linenoiseCompletions *, const char *);
-void linenoiseAddHistoryCompletions(const char*, linenoiseCompletions *);
 
 char *linenoise(const char *prompt);
 void linenoiseFree(void *ptr);
 int linenoiseHistoryAdd(const char *line);
 int linenoiseHistorySetMaxLen(int len);
-int linenoiseHistoryGetMaxLen(void);
 int linenoiseHistorySave(const char *filename);
 int linenoiseHistoryLoad(const char *filename);
-int linenoiseHistoryCopy(char** dest, int destlen);
 void linenoiseClearScreen(void);
 void linenoiseSetMultiLine(int ml);
 void linenoisePrintKeyCodes(void);
-
-typedef size_t (linenoisePrevCharLen)(const char *buf, size_t buf_len, size_t pos, size_t *col_len);
-typedef size_t (linenoiseNextCharLen)(const char *buf, size_t buf_len, size_t pos, size_t *col_len);
-typedef size_t (linenoiseReadCode)(int fd, char *buf, size_t buf_len, int* c);
-
-void linenoiseSetEncodingFunctions(
-    linenoisePrevCharLen *prevCharLenFunc,
-    linenoiseNextCharLen *nextCharLenFunc,
-    linenoiseReadCode *readCodeFunc);
+void linenoiseMaskModeEnable(void);
+void linenoiseMaskModeDisable(void);
 
 #ifdef __cplusplus
 }

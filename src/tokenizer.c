@@ -1,6 +1,6 @@
 #include "tokenizer.h"
 
-char **tokenize(char *line, char *sep) {
+char **tokenize(char *line, char *sep) { // 2 frees misisng
   char **array = malloc(sizeof(char *));
 
   if (array) {
@@ -17,11 +17,9 @@ char **tokenize(char *line, char *sep) {
       array = tmp;
       ++n;
 
-      array[n - 2] = malloc(strlen(token) + 1);
-      if (array[n - 2] != NULL)
-        strcpy(array[n - 2], token);
+      array[n - 2] = strdup(token); // culprit
 
-      token = strtok(NULL, sep);
+      token = strtok(NULL, sep); 
     }
 
     array[n - 1] = NULL;
@@ -69,7 +67,8 @@ char ***tokenize_pipeline(char **args) {
       args_cmd[pipe_args_size - 1] = NULL;
       current_arg_size = 1;
     } else {
-      args_cmd[pipe_args_size - 1] = (char **)realloc(args_cmd[pipe_args_size - 1], (++current_arg_size) * sizeof(char *));
+      args_cmd[pipe_args_size - 1] = (char **)realloc(
+          args_cmd[pipe_args_size - 1], (++current_arg_size) * sizeof(char *));
       args_cmd[pipe_args_size - 1][current_arg_size - 2] = *s;
       args_cmd[pipe_args_size - 1][current_arg_size - 1] = NULL;
     }

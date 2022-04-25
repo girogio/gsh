@@ -1,4 +1,4 @@
-#include "proc.c"
+#include "../src/proc.c"
 
 int main() {
 
