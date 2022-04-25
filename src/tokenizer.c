@@ -17,7 +17,7 @@ char **tokenize(char *line, char *sep) { // 2 frees misisng
       array = tmp;
       ++n;
 
-      array[n - 2] = strdup(token); // culprit
+      array[n - 2] = strdup(token); // culprit - FUCK YOU
 
       token = strtok(NULL, sep); 
     }
