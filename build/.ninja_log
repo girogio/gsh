@@ -1,0 +1,6 @@
+# ninja log v5
+1	50	1650812150496777267	CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/parser.c.o	3aeaa9fd97039501
+1	55	1650812150500110601	CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/builtins.c.o	3f55067c5d4dec05
+0	61	1650812150506777268	CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/gsh.c.o	3ed56d0375863825
+1	65	1650812150513443935	CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/proc.c.o	2f8f6887a3b1b674
+0	133	1650812150580110603	CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/lib/linenoise.c.o	c86bd60be7bb5263

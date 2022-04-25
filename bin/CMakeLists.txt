@@ -21,4 +21,4 @@ project(gsh)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./)
 
-add_executable(gsh ../src/gsh.c ../lib/linenoise.c ../src/proc.c ../src/tokenizer.c )
+add_executable(gsh ../src/gsh.c ../lib/linenoise.c ../src/proc.c ../src/tokenizer.c ../src/parser.c ../src/builtins.c)

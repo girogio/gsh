@@ -1,107 +1,87 @@
 #include "tokenizer.h"
 
-char *trim(char *str) {
-  char *end;
+char **tokenize(char *line, char *sep) {
+  char **array = malloc(sizeof(char *));
 
-  // Trim leading space
-  while (isspace((unsigned char)*str))
-    str++;
+  if (array) {
+    size_t n = 1;
 
-  if (*str == 0) // All spaces?
-    return str;
+    char *token = strtok(line, sep);
 
-  // Trim trailing space
-  end = str + strlen(str) - 1;
-  while (end > str && isspace((unsigned char)*end))
-    end--;
+    while (token) {
+      char **tmp = realloc(array, (n + 1) * sizeof(char *));
 
-  // Write new null terminator character
-  end[1] = '\0';
+      if (tmp == NULL)
+        break;
 
-  return str;
-}
+      array = tmp;
+      ++n;
 
-int tokc(const char *buff) {
-  int count = 0, inword = 0;
-  do
-    switch (*buff) {
-    case '\0':
-    case ' ':
-    case '\t':
-    case '\n':
-    case '\r': // TODO others?
-      if (inword) {
-        inword = 0;
-        count++;
-      }
-      break;
-    default:
-      inword = 1;
+      array[n - 2] = malloc(strlen(token) + 1);
+      if (array[n - 2] != NULL)
+        strcpy(array[n - 2], token);
+
+      token = strtok(NULL, sep);
     }
-  while (*buff++ != 0);
-  return count;
-}
 
-char **tokenize(char *buff, char *sep, int tokc) {
-
-  char **tokens = (char **)calloc(tokc + 1, sizeof(char *));
-
-  tokens[tokc] = NULL;
-
-  char *p = strtok(buff, sep);
-  int i = 0;
-  while (p != NULL) {
-    tokens[i++] = trim(p);
-    p = strtok(NULL, sep);
+    array[n - 1] = NULL;
   }
 
-  return tokens;
+  return array;
 }
 
-int pipe_count(const char *buff){
+#ifdef DEBUG
+void print_tokens(char **array) {
 
-  int pipec = 0;
+  printf("args: [ ");
 
-  for (int i = 0; i < strlen(buff); i++)
-    if (buff[i] == '|')
-      pipec++;
+  for (char **p = array; *p != NULL; ++p) {
+    printf("\"");
 
-  return pipec;
+    printf("%s", *p);
+
+    if (*(p + 1) == NULL)
+      printf("\"");
+    else
+      printf("\", ");
+  }
+
+  printf(" ]\n");
+}
+#endif
+
+void free_tokens(char **array) {
+  for (char **p = array; *p; ++p)
+    free(*p);
+  free(array);
 }
 
-void print_args(char **tokens, int tokc) {
-  printf("tokens: [");
-  for (int i = 0; i <= tokc; i++) {
-    if (i == tokc)
-      printf("%s", tokens[i]);
-    else {
-      printf("%s, ", tokens[i]);
+char ***tokenize_pipeline(char **args) {
+
+  size_t pipe_args_size = 1;
+  size_t current_arg_size = 1;
+
+  char ***args_cmd = (char ***)calloc(pipe_args_size, sizeof(char **));
+
+  for (char **s = args; *s != NULL; ++s) {
+    if (!strcmp(*s, "|")) {
+      args_cmd = realloc(args_cmd, (++pipe_args_size + 1) * sizeof(char **));
+      current_arg_size = 1;
+    } else {
+      args_cmd[pipe_args_size - 1] = (char **)realloc(args_cmd[pipe_args_size - 1], (++current_arg_size) * sizeof(char *));
+      args_cmd[pipe_args_size - 1][current_arg_size - 2] = *s;
+      args_cmd[pipe_args_size - 1][current_arg_size - 1] = NULL;
     }
   }
-  printf("]\n\n");
+
+  args_cmd[pipe_args_size] = NULL;
+
+  return args_cmd;
 }
 
-char ***tokenize_args(char **piped_array, int pipec) {
-  char ***pipeline = (char ***)calloc(pipec + 1, sizeof(char **));
-
-  for (int i = 0; i < pipec; i++) {
-    pipeline[i] = tokenize(piped_array[i], " ", tokc(piped_array[i] + 1));
-    print_args(pipeline[i], tokc(piped_array[i]) + 1);
+void free_pipeline_tokens(char ***pipeline_array) {
+  for (char ***arr = pipeline_array; *arr != NULL; ++arr) {
+    free(*arr);
   }
-
-  return pipeline;
+  free(pipeline_array);
 }
-
-// int main() {
-//   char args[] = "ls -la |  grep file | more   | wc -l ";
-
-//   int argc = tokpipec(args);
-//   printf("%d\n", argc);
-//   char **bruh = tokenize_pipe(args, "|", argc);
-//   print_args(bruh, argc);
-//   char ***bruhhh = tokenize_args(bruh, argc);
-
-//       // printf("%d", tokenize_pipes(bruh, tokenc));
-
-//       return 0;
-// }

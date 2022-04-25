@@ -1,4 +1,0 @@
-cl
-clear
-ads anldn slkdna s
-exit
