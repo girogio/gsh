@@ -66,6 +66,7 @@ char ***tokenize_pipeline(char **args) {
   for (char **s = args; *s != NULL; ++s) {
     if (!strcmp(*s, "|")) {
       args_cmd = realloc(args_cmd, (++pipe_args_size + 1) * sizeof(char **));
+      args_cmd[pipe_args_size - 1] = NULL;
       current_arg_size = 1;
     } else {
       args_cmd[pipe_args_size - 1] = (char **)realloc(args_cmd[pipe_args_size - 1], (++current_arg_size) * sizeof(char *));
