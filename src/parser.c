@@ -60,7 +60,9 @@ void process_input(char *input) {
     targc++;
   }
 
-  // printf("token_count = [%d]\n", targc);
+  #ifdef DEBUG
+  printf("token_count = [%d]\n", targc);
+  #endif
 
   if (!strcmp("<", tokens[0]) | !strcmp(">", tokens[0]) |
       !strcmp("<<", tokens[0]) | !strcmp(">>", tokens[0]) |
@@ -101,22 +103,22 @@ void process_input(char *input) {
         }
       }
 
-      file_in == NULL ?  : printf("%s\n", file_in);
-      file_out == NULL ? :  printf("%s\n", file_out);
+#ifdef DEBUG
+      file_in == NULL ?: printf("%s\n", file_in);
+      file_out == NULL ?: printf("%s\n", file_out);
+#endif
 
-      char ***pipeinput_args = tokenize_pipeline(tokens);
+      char ***pipeline = tokenize_pipeline(tokens);
 
-      execute_pipeline_ex(pipeinput_args, false, file_in, file_out, append);
+      execute_pipeline_ex(pipeline, false, file_in, file_out, append);
 
-      if (file_out != NULL)
-        free(file_out);
-      if (file_in != NULL)
-        free(file_in);
+      free(file_out);
+      free(file_in);
+      free_pipeline_tokens(pipeline);
     }
 
   } else {
     printf("syntax error: invalid file name\n"); // oopsies
   }
-
   free_tokens(tokens);
 }

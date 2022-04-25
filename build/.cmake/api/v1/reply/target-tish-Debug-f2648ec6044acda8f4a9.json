@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "gsh"
+			"path" : "tish"
 		}
 	],
 	"backtrace" : 1,
@@ -50,7 +50,7 @@
 			]
 		}
 	],
-	"id" : "gsh::@6890427a1f51a3e7e1df",
+	"id" : "tish::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -66,8 +66,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "gsh",
-	"nameOnDisk" : "gsh",
+	"name" : "tish",
+	"nameOnDisk" : "tish",
 	"paths" : 
 	{
 		"build" : ".",
@@ -93,7 +93,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "/home/grongo/Assignments/cps1012/src/gsh.c",
+			"path" : "/home/grongo/Assignments/cps1012/src/tinyshell.c",
 			"sourceGroupIndex" : 0
 		},
 		{

@@ -831,7 +831,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "gsh"
+			"value" : "tish"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1114,7 +1114,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "gsh_BINARY_DIR",
+			"name" : "tish_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1126,7 +1126,7 @@
 			"value" : "/home/grongo/Assignments/cps1012/build"
 		},
 		{
-			"name" : "gsh_IS_TOP_LEVEL",
+			"name" : "tish_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1138,7 +1138,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "gsh_SOURCE_DIR",
+			"name" : "tish_SOURCE_DIR",
 			"properties" : 
 			[
 				{

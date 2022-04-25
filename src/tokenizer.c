@@ -61,7 +61,7 @@ char ***tokenize_pipeline(char **args) {
   size_t pipe_args_size = 1;
   size_t current_arg_size = 1;
 
-  char ***args_cmd = (char ***)calloc(pipe_args_size, sizeof(char **));
+  char ***args_cmd = (char ***)calloc(pipe_args_size + 1, sizeof(char **));
 
   for (char **s = args; *s != NULL; ++s) {
     if (!strcmp(*s, "|")) {

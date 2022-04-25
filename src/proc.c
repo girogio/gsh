@@ -227,7 +227,7 @@ int execute_pipeline_ex(char ***pipeline_args, bool async, char *file_in,
       }
 
       if (execvp(pipeline_args[stage][0], pipeline_args[stage]) == -1) {
-        perror("Exec failed!");
+        perror(pipeline_args[stage][0]);
         exit(EXIT_FAILURE);
       }
 

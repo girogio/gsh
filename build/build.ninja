@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: gsh
+# Project: tish
 # Configurations: Debug
 # =============================================================================
 
@@ -41,66 +41,66 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/grongo/Assignments/cps1012/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target gsh
+# Object build statements for EXECUTABLE target tish
 
 
 #############################################
-# Order-only phony target for gsh
+# Order-only phony target for tish
 
-build cmake_object_order_depends_target_gsh: phony || CMakeFiles/gsh.dir
+build cmake_object_order_depends_target_tish: phony || CMakeFiles/tish.dir
 
-build CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/gsh.c.o: C_COMPILER__gsh_Debug /home/grongo/Assignments/cps1012/src/gsh.c || cmake_object_order_depends_target_gsh
-  DEP_FILE = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/gsh.c.o.d
+build CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/tinyshell.c.o: C_COMPILER__tish_Debug /home/grongo/Assignments/cps1012/src/tinyshell.c || cmake_object_order_depends_target_tish
+  DEP_FILE = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/tinyshell.c.o.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/gsh.dir
-  OBJECT_FILE_DIR = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src
+  OBJECT_DIR = CMakeFiles/tish.dir
+  OBJECT_FILE_DIR = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src
 
-build CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/lib/linenoise.c.o: C_COMPILER__gsh_Debug /home/grongo/Assignments/cps1012/lib/linenoise.c || cmake_object_order_depends_target_gsh
-  DEP_FILE = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/lib/linenoise.c.o.d
+build CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/lib/linenoise.c.o: C_COMPILER__tish_Debug /home/grongo/Assignments/cps1012/lib/linenoise.c || cmake_object_order_depends_target_tish
+  DEP_FILE = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/lib/linenoise.c.o.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/gsh.dir
-  OBJECT_FILE_DIR = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/lib
+  OBJECT_DIR = CMakeFiles/tish.dir
+  OBJECT_FILE_DIR = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/lib
 
-build CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/proc.c.o: C_COMPILER__gsh_Debug /home/grongo/Assignments/cps1012/src/proc.c || cmake_object_order_depends_target_gsh
-  DEP_FILE = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/proc.c.o.d
+build CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/proc.c.o: C_COMPILER__tish_Debug /home/grongo/Assignments/cps1012/src/proc.c || cmake_object_order_depends_target_tish
+  DEP_FILE = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/proc.c.o.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/gsh.dir
-  OBJECT_FILE_DIR = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src
+  OBJECT_DIR = CMakeFiles/tish.dir
+  OBJECT_FILE_DIR = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src
 
-build CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/tokenizer.c.o: C_COMPILER__gsh_Debug /home/grongo/Assignments/cps1012/src/tokenizer.c || cmake_object_order_depends_target_gsh
-  DEP_FILE = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/tokenizer.c.o.d
+build CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/tokenizer.c.o: C_COMPILER__tish_Debug /home/grongo/Assignments/cps1012/src/tokenizer.c || cmake_object_order_depends_target_tish
+  DEP_FILE = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/tokenizer.c.o.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/gsh.dir
-  OBJECT_FILE_DIR = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src
+  OBJECT_DIR = CMakeFiles/tish.dir
+  OBJECT_FILE_DIR = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src
 
-build CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/parser.c.o: C_COMPILER__gsh_Debug /home/grongo/Assignments/cps1012/src/parser.c || cmake_object_order_depends_target_gsh
-  DEP_FILE = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/parser.c.o.d
+build CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/parser.c.o: C_COMPILER__tish_Debug /home/grongo/Assignments/cps1012/src/parser.c || cmake_object_order_depends_target_tish
+  DEP_FILE = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/parser.c.o.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/gsh.dir
-  OBJECT_FILE_DIR = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src
+  OBJECT_DIR = CMakeFiles/tish.dir
+  OBJECT_FILE_DIR = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src
 
-build CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/builtins.c.o: C_COMPILER__gsh_Debug /home/grongo/Assignments/cps1012/src/builtins.c || cmake_object_order_depends_target_gsh
-  DEP_FILE = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/builtins.c.o.d
+build CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/builtins.c.o: C_COMPILER__tish_Debug /home/grongo/Assignments/cps1012/src/builtins.c || cmake_object_order_depends_target_tish
+  DEP_FILE = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/builtins.c.o.d
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/gsh.dir
-  OBJECT_FILE_DIR = CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src
+  OBJECT_DIR = CMakeFiles/tish.dir
+  OBJECT_FILE_DIR = CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target gsh
+# Link build statements for EXECUTABLE target tish
 
 
 #############################################
-# Link the executable gsh
+# Link the executable tish
 
-build gsh: C_EXECUTABLE_LINKER__gsh_Debug CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/gsh.c.o CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/lib/linenoise.c.o CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/proc.c.o CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/tokenizer.c.o CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/parser.c.o CMakeFiles/gsh.dir/home/grongo/Assignments/cps1012/src/builtins.c.o
+build tish: C_EXECUTABLE_LINKER__tish_Debug CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/tinyshell.c.o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/lib/linenoise.c.o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/proc.c.o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/tokenizer.c.o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/parser.c.o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/builtins.c.o
   FLAGS = -g
   LINK_FLAGS = -rdynamic
-  OBJECT_DIR = CMakeFiles/gsh.dir
+  OBJECT_DIR = CMakeFiles/tish.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = gsh
-  TARGET_PDB = gsh.dbg
+  TARGET_FILE = tish
+  TARGET_PDB = tish.dbg
 
 
 #############################################
@@ -137,7 +137,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/grongo/Assignments/cps1012/build
 
-build all: phony gsh
+build all: phony tish
 
 # =============================================================================
 # Unknown Build Time Dependencies.

@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "gsh",
+					"name" : "tish",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "gsh::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-gsh-Debug-5665a9823dfaf1bddb32.json",
-					"name" : "gsh",
+					"id" : "tish::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tish-Debug-f2648ec6044acda8f4a9.json",
+					"name" : "tish",
 					"projectIndex" : 0
 				}
 			]

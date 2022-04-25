@@ -141,7 +141,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=gsh
+CMAKE_PROJECT_NAME:STATIC=tish
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -206,13 +206,13 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-gsh_BINARY_DIR:STATIC=/home/grongo/Assignments/cps1012/build
+tish_BINARY_DIR:STATIC=/home/grongo/Assignments/cps1012/build
 
 //Value Computed by CMake
-gsh_IS_TOP_LEVEL:STATIC=ON
+tish_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-gsh_SOURCE_DIR:STATIC=/home/grongo/Assignments/cps1012/bin
+tish_SOURCE_DIR:STATIC=/home/grongo/Assignments/cps1012/bin
 
 
 ########################
