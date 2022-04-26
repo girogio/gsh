@@ -3,6 +3,7 @@
 #include "proc.h"
 #include "string.h"
 #include "tokenizer.h"
+#include <stdlib.h>
 
 bool is_redir_tok(const char *s) {
 
@@ -75,7 +76,11 @@ void process_input(char *input) {
     printf("syntax error near unexpected token `%s'\n", tokens[targc - 1]);
   } else if (redir_file_valid(tokens)) { // we got here: no syntax errors, nice
 
-    if (execute_builtin(tokens) == -1) { // builtin not found
+    int exit_builtin_code = execute_builtin(tokens);
+    if (exit_builtin_code == -3) {
+      free(input);
+      exit(EXIT_SUCCESS);
+    } else if (exit_builtin_code == -1) { // builtin not found
 
       char *file_out = NULL;
       char *file_in = NULL;
@@ -103,14 +108,13 @@ void process_input(char *input) {
         }
       }
 
-#ifdef DEBUG
-      file_in == NULL ?: printf("%s\n", file_in);
-      file_out == NULL ?: printf("%s\n", file_out);
-#endif
+      // file_in == NULL ?: printf("file in: %s\n", file_in);
+      // file_out == NULL ?: printf("file out: %s\n", file_out);
 
       char ***pipeline = tokenize_pipeline(tokens);
 
-      if (execute_pipeline_ex(pipeline, false, file_in, file_out, append) ==   -1) {
+      if (execute_pipeline_ex(pipeline, false, file_in, file_out, append) ==
+          -1) {
         free(tokens);
       }
 

@@ -28,7 +28,6 @@ char **tokenize(char *line, char *sep) { // 2 frees misisng
   return array;
 }
 
-#ifdef DEBUG
 void print_tokens(char **array) {
 
   printf("args: [ ");
@@ -46,7 +45,6 @@ void print_tokens(char **array) {
 
   printf(" ]\n");
 }
-#endif
 
 void free_tokens(char **array) {
   for (char **p = array; *p; ++p)

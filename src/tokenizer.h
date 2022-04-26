@@ -5,6 +5,7 @@
 #include <string.h>
 
 char **tokenize(char *line, char *sep);
+void print_tokens(char **array);
 void free_tokens(char **tokenized_array);
 
 char ***tokenize_pipeline(char **args);

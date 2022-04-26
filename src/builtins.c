@@ -12,7 +12,7 @@ int exit_shell(char **tokens) {
   for (char **p = tokens; *p != NULL; ++p)
     free(*p);
   free(tokens);
-  exit(EXIT_SUCCESS);
+  return -2; // return this if exiting
 }
 
 int change_dir(char **args) {
@@ -31,7 +31,7 @@ int change_dir(char **args) {
   } else if (chdir(args[1]) == -1)
     perror("cd failed");
 
-  return EXIT_SUCCESS;
+  return EXIT_SUCCESS; // return this if succeded
 }
 
 int print_cwd() {
@@ -42,7 +42,7 @@ int print_cwd() {
     perror("getcwd failed");
     return EXIT_FAILURE;
   }
-  return EXIT_SUCCESS;
+  return EXIT_SUCCESS; // return this if succeded
 }
 
 int clear_screen(char **args) {
@@ -77,5 +77,5 @@ int execute_builtin(char **args) {
       return builtin_list[i].method(args);
     }
   }
-  return -1;                                      // return this if noting found
+  return -1; // return this if noting found
 }

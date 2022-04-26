@@ -1,6 +1,8 @@
+
 #include "../lib/linenoise.h"
 #include "parser.h"
 #include <limits.h>
+#include <stdio.h>
 #include <unistd.h>
 
 int update_prompt(char *PS1) {
@@ -12,18 +14,15 @@ int update_prompt(char *PS1) {
 
   PS1[0] = '\0';
 
-  strcat(PS1, "\033[1;34m");
-
   strcat(PS1, cwd);
 
-  strcat(PS1, " tish \033[1;32m$\033[m ");
+  strcat(PS1, " tish $ ");
 
   return EXIT_SUCCESS;
 }
 
 int main(int argc, char **argv) {
   char *line;
-  char *prgname = argv[0];
 
   linenoiseHistoryLoad("history.txt");
 
@@ -41,10 +40,9 @@ int main(int argc, char **argv) {
       linenoiseHistorySave("history.txt"); // Save the history on disk.
 
       process_input(line);
-      
+      update_prompt(PS1);
     }
     free(line);
-    update_prompt(PS1);
   }
   return 0;
 }
