@@ -67,8 +67,7 @@ char ***tokenize_pipeline(char **args) {
       args_cmd[pipe_args_size - 1] = NULL;
       current_arg_size = 1;
     } else {
-      args_cmd[pipe_args_size - 1] = (char **)realloc(
-          args_cmd[pipe_args_size - 1], (++current_arg_size) * sizeof(char *));
+      args_cmd[pipe_args_size - 1] = (char **)realloc(args_cmd[pipe_args_size - 1], (++current_arg_size) * sizeof(char *));
       args_cmd[pipe_args_size - 1][current_arg_size - 2] = *s;
       args_cmd[pipe_args_size - 1][current_arg_size - 1] = NULL;
     }

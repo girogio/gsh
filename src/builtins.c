@@ -8,8 +8,10 @@ static struct builtin_command builtin_list[] = {{"exit", &exit_shell},
                                                 {"ver", &show_info},
                                                 {"clear", &clear_screen}};
 
-int exit_shell(char **args) {
-  free(args);
+int exit_shell(char **tokens) {
+  for (char **p = tokens; *p != NULL; ++p)
+    free(*p);
+  free(tokens);
   exit(EXIT_SUCCESS);
 }
 
@@ -44,7 +46,7 @@ int print_cwd() {
 }
 
 int clear_screen(char **args) {
-  linenoiseClearScreen();
+  printf("\e[1;1H\e[2J\n");
   return EXIT_SUCCESS;
 }
 
@@ -75,5 +77,5 @@ int execute_builtin(char **args) {
       return builtin_list[i].method(args);
     }
   }
-  return -1;
+  return -1;                                      // return this if noting found
 }
