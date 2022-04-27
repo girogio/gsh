@@ -77,7 +77,7 @@ void process_input(char *input) {
   } else if (redir_file_valid(tokens)) { // we got here: no syntax errors, nice
 
     int exit_builtin_code = execute_builtin(tokens);
-    if (exit_builtin_code == -3) {
+    if (exit_builtin_code == -2) {
       free(input);
       exit(EXIT_SUCCESS);
     } else if (exit_builtin_code == -1) { // builtin not found
@@ -108,16 +108,10 @@ void process_input(char *input) {
         }
       }
 
-      // file_in == NULL ?: printf("file in: %s\n", file_in);
-      // file_out == NULL ?: printf("file out: %s\n", file_out);
-
       char ***pipeline = tokenize_pipeline(tokens);
 
-      if (execute_pipeline_ex(pipeline, false, file_in, file_out, append) ==
-          -1) {
-        free(tokens);
-      }
-
+      execute_pipeline_ex(pipeline, false, file_in, file_out, append);
+      
       free(file_out);
       free(file_in);
       free_pipeline_tokens(pipeline);
