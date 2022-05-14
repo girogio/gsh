@@ -9,12 +9,10 @@
 #include <stdlib.h>
 
 bool is_redir_tok(const char *s) {
-
-  if (!strcmp(s, "<") | !strcmp(s, ">") | !strcmp(s, ">>")) {
+  if (!strcmp(s, "<") | !strcmp(s, ">") | !strcmp(s, ">>"))
     return true;
-  }
-
-  return false;
+  else
+    return false;
 }
 
 const char invalid_file_name_characters[] = {'#', '%', '&', '{', '}', '\\', '<',
@@ -91,8 +89,9 @@ void do_pipeline(char *input) {
         case 0:
           file_in = strdup(*(s + 1));
           for (char **new_args = s; *new_args != NULL; ++new_args) {
-            *new_args = *(s + 2);
+            *new_args = *(new_args + 2);
           }
+          args->size -= 2;
           s -= 2;
           break;
         case 2:
@@ -100,8 +99,9 @@ void do_pipeline(char *input) {
         case 1:
           file_out = strdup(*(s + 1));
           for (char **new_args = s; *new_args; ++new_args) {
-            *new_args = *(s + 2);
+            *new_args = *(new_args + 2);
           }
+          args->size -= 2;
           s -= 2;
           break;
         }
@@ -123,9 +123,16 @@ void do_pipeline(char *input) {
 }
 
 void process_input(char *input) {
-  char *last_pipe = strtok(input, ";");
-  while (last_pipe != NULL) {
-    do_pipeline(last_pipe);
-    last_pipe = strtok(NULL, ";");
+  char *last_pipeline = input;
+  for (char *c = input; *c; ++c) {
+    if (*c == '\\' && *(c + 1) == ';') {
+      c++;
+    } else if (*c == ';') {
+      *c = '\0';
+      do_pipeline(last_pipeline);
+      last_pipeline = ++c;
+    } else if (*(c + 1) == '\0') {
+      do_pipeline(last_pipeline); // end is here
+    }
   }
 }
