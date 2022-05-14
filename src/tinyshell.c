@@ -1,9 +1,6 @@
 
 #include "../lib/linenoise.h"
 #include "parser.h"
-#include <limits.h>
-#include <stdio.h>
-#include <unistd.h>
 
 int update_prompt(char *PS1) {
   char cwd[PATH_MAX];

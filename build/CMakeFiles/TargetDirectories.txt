@@ -1,0 +1,3 @@
+/home/grongo/Assignments/cps1012/build/CMakeFiles/tish.dir
+/home/grongo/Assignments/cps1012/build/CMakeFiles/edit_cache.dir
+/home/grongo/Assignments/cps1012/build/CMakeFiles/rebuild_cache.dir

@@ -1,6 +1,4 @@
 #include "builtins.h"
-#include "parser.h"
-#include <stdlib.h>
 
 static struct builtin_command builtin_list[] = {{"exit", &exit_shell},
                                                 {"cd", &change_dir},
@@ -26,8 +24,8 @@ int change_dir(char **args) {
   if (argc > 2) {
     printf("cd: too many arguments\n");
   } else if (argc == 1) {
-    if (getenv("HOME"))
-      chdir(getenv("HOME"));
+    if (getenv("home"))
+      chdir(getenv("home"));
   } else if (chdir(args[1]) == -1)
     perror("cd failed");
 
@@ -46,7 +44,7 @@ int print_cwd() {
 }
 
 int clear_screen(char **args) {
-  printf("\e[1;1H\e[2J\n");
+  linenoiseClearScreen();
   return EXIT_SUCCESS;
 }
 
@@ -59,13 +57,13 @@ int show_info(char **args) {
   puts(" \\__|_|_| |_|\\__, |___/_| |_|\\___|_|_|");
   puts("             |___/     ");
 
-  puts("\n\nVersion: 1.0");
-  puts("Author: Giorgio Grigolo");
-  puts("Description: A simple shell, aims to supply basic functionality that a "
-       "shell would have. Before you ask me: I might not be able to get past "
-       "Iudex Gundyr but I can code a shell. "
+  puts("\n\nversion: 1.0");
+  puts("author: giorgio grigolo");
+  puts("description: a simple shell, aims to supply basic functionality that a "
+       "shell would have. before you ask me: i might not be able to get past "
+       "iudex gundyr but i can code a shell. "
 
-       "😎\n\n\nPlease consider supporting this project as I would love to a "
+       "😎\n\n\nplease consider supporting this project as i would love to a "
        "good grade.");
   return 0;
 }

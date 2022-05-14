@@ -14,8 +14,8 @@ struct builtin_command {
 
 int execute_builtin(char **args);
 
-int exit_shell(char **args);
-int change_dir(char **args);
+int exit_shell(char **);
+int change_dir(char **);
 int print_cwd();
-int show_info(char **args);
-int clear_screen(char **args);
+int show_info(char **);
+int clear_screen(char **);

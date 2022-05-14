@@ -15,11 +15,11 @@
 #
 
 
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.23.1)
 
 project(tish)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -O3")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ggdb3")
 
-add_executable(tish ../src/tinyshell.c ../lib/linenoise.c ../src/proc.c ../src/tokenizer.c ../src/parser.c ../src/builtins.c)
+add_executable(tish ../src/tinyshell.c ../lib/linenoise.c ../src/builtins.c)

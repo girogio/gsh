@@ -1,88 +1,100 @@
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l | figelt
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l | figlet
-cl
-exit
-ls -la | wc -l | figlet
-wc -la 
-exit
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l | figlet
-adsa skdnba skdbask jbdask djbaskjd baskjd baskdjba
-asdm bnaskd baskjdb askjdb askjdba
-cd 
-ls -la 
-clear
-ls ad asldk,as;ld kas;ldka;ldk as;ldkas;de
-exit
 ls -la
-as dask daslkd naskldn asd aslkdnasd
+make
 exit
-ls -la
-a
+ls -la | wc -l | figlet
+exit
 clear
+ls
 ls -la
 clear
-ls -la 
-clear
- asd asd asdlkj nasld naslkd a
-dasd,asldm asldmas
- da
-'sdkas 
-'dkas
-d'k asdasdn asdj  askdn alsdn  aspdk mnasokod nas
-cas ndasjokl dad a
- asd asld asddasac
-clear
-celar
+ls -la | wc -l | figlet
+ls -la  > file_out
 cl
 clear
-ls l-a 
-ls -la 
+ls
+clear
+ls -la | wc -l | ls
+ls -la | wc -l | figlet
+exit
+ver
+clear
+ls | wc -l
+exit
+e"cho"
+exit
+cl;
+clear
+cowsay >> as
+touch one two three
+rm one two three
+rm out
+rm vgcore.6841
+rm city_count.txt
+rm city_coun.txt
+rm file_out
+rm cities.txt
+rm cities_sorted.txt
+rm as
+rm city_cound.txt
+rm history.txt
+ls
+clear
+rm clear
+rm message.txt
+clear
+exit
+ls
+ls -la
+echo "test > funky stuff"
+echo "test \" > funky stuff"
+ls
+clear
+cl
 clear
 ls -la
+cl
 clear
 ls
 cl
-ls -la
-EXIT
-exit
-ls -la a';ds asdkmn aspkdnas ondasd 
-exit
-ls -al asdm as 
- dsad asodn asdaa asdjn asdsas doknas dn
-asjdn jaksjnd  addaosjknb daosjnd  asdojb as adsd akjsd basjdasbdaiskjbdsd asojnd 			kjbasd\
-ls -la
 clear
+exit
+ls -la | wc -l
+exit
+ls -la | wc -l
+exit
+ls -la | wc -l | figlet
+exit
+ls -la | wc -l
+exit
 ls -la
-clear
-ls 
+exit
+ls -la | wc -l | figlet
+exit
+ls -la | wc -l | figlet
+exit
 ls -la
-cle
+exit
+ls -la
+exit
+ls -la | wc -l
+ls -la | wc -l | figlet
+exit
+ls -la | wc -l | exit
+exit
+ls -la
+ls -la | wc -l | eall
+exit
+alsdksad
+exit
+ls -la  | wc -l 
+ls -la  | wc -l  | figlet
+echo "A very weird string > < >> ! "
+echo "A very weird string > < >> ! " | figlet
+echo "A very weird string > \"< >> ! " | figlet
+echo "A very weird string > \"< >> ! " 
 cl
-clear
-exit
-clear
-ls -la
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l | figlet
-exit
-ls -la 
-cd ..
 l
-sl
-ls
-sl
-cwd
+clear
+ls -la
 cd ..
+cd 
