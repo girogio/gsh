@@ -12,7 +12,7 @@ typedef enum TokenType {
   REDIRECT_IN,
   REDIRECT_OUT,
   APPEND
-} TokenType;
+} TokenType; // your time is near. not now however.
 
 typedef struct String {
   char *string;
@@ -101,7 +101,7 @@ Args *tokenize(char *line) {
       break;
     case '\"':                              // time to enter the quote-verse
       while (*++c != '\"')                  // until next quote
-        if (*c == '\\' && *(c + 1) == '\"') // watch out for pesky fugitives
+        if (*c == '\\' && (*(c + 1) == '\"' || *(c + 1) == '\\' || *(c+1) == ';')) // watch out for pesky escapees
           append_to_string(s, *++c);
         else
           append_to_string(s, *c);
