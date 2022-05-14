@@ -84,14 +84,14 @@ void do_pipeline(char *input) {
       char *file_out = NULL;
       char *file_in = NULL;
 
-      bool append = true;
+      bool append = false;
 
       for (char **s = tokens; *s != NULL; ++s) {
         switch (redirection_type(*s)) {
         case 0:
           file_in = strdup(*(s + 1));
           for (char **new_args = s; *new_args != NULL; ++new_args) {
-            *new_args = *(new_args + 2);
+            *new_args = *(s + 2);
           }
           s -= 2;
           break;
@@ -99,8 +99,8 @@ void do_pipeline(char *input) {
           append = true;
         case 1:
           file_out = strdup(*(s + 1));
-          for (char **new_args = s; *new_args != NULL; ++new_args) {
-            *new_args = *(new_args + 2);
+          for (char **new_args = s; *new_args; ++new_args) {
+            *new_args = *(s + 2);
           }
           s -= 2;
           break;
