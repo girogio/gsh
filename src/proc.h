@@ -1,6 +1,5 @@
 #pragma once
 #include "parser.h"
-#include <linux/limits.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
