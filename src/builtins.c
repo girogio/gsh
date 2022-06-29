@@ -3,8 +3,7 @@
 static struct builtin_command builtin_list[] = {{"exit", &exit_shell},
                                                 {"cd", &change_dir},
                                                 {"cwd", &print_cwd},
-                                                {"ver", &show_info},
-                                                {"clear", &clear_screen}};
+                                                {"ver", &show_info}};
 
 int exit_shell(char **tokens) {
   for (char **p = tokens; *p != NULL; ++p)
@@ -41,11 +40,6 @@ int print_cwd() {
     return EXIT_FAILURE;
   }
   return EXIT_SUCCESS; // return this if succeded
-}
-
-int clear_screen(char **args) {
-    printf("\e[1;1H\e[2J");
-  return EXIT_SUCCESS;
 }
 
 int show_info(char **args) {

@@ -81,7 +81,6 @@ Args *tokenize(char *line) {
 
   for (char *c = line; *c != '\0'; c++) {
     switch (*c) {
-      break;
     case ' ': // push to the args!
       append_to_args(a, s);
       break;

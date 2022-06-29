@@ -187,8 +187,7 @@ int execute_pipeline(char ***pipeline_args, bool async) {
   return EXIT_SUCCESS;
 }
 
-int execute_pipeline_ex(char ***pipeline_args, bool async, char *file_in,
-                        char *file_out, bool append_out) {
+int execute_pipeline_ex(char ***pipeline_args, bool async, char *file_in, char *file_out, bool append_out) {
   int child_count = 0;
 
   char ***arg = pipeline_args;

@@ -1,32 +1,17 @@
 [
 {
-  "directory": "/home/grongo/Assignments/cps1012/build",
-  "command": "/usr/bin/x86_64-pc-linux-gnu-gcc-11.2.0  -g -O3 -g -o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/tinyshell.c.o -c /home/grongo/Assignments/cps1012/src/tinyshell.c",
-  "file": "/home/grongo/Assignments/cps1012/src/tinyshell.c"
+  "directory": "/Users/grongo/Assignments/cps1012/build",
+  "command": "/usr/bin/clang    -ggdb3 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/tish.dir/Users/grongo/Assignments/cps1012/src/tinyshell.c.o -c /Users/grongo/Assignments/cps1012/src/tinyshell.c",
+  "file": "/Users/grongo/Assignments/cps1012/src/tinyshell.c"
 },
 {
-  "directory": "/home/grongo/Assignments/cps1012/build",
-  "command": "/usr/bin/x86_64-pc-linux-gnu-gcc-11.2.0  -g -O3 -g -o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/lib/linenoise.c.o -c /home/grongo/Assignments/cps1012/lib/linenoise.c",
-  "file": "/home/grongo/Assignments/cps1012/lib/linenoise.c"
+  "directory": "/Users/grongo/Assignments/cps1012/build",
+  "command": "/usr/bin/clang    -ggdb3 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/tish.dir/Users/grongo/Assignments/cps1012/lib/linenoise.c.o -c /Users/grongo/Assignments/cps1012/lib/linenoise.c",
+  "file": "/Users/grongo/Assignments/cps1012/lib/linenoise.c"
 },
 {
-  "directory": "/home/grongo/Assignments/cps1012/build",
-  "command": "/usr/bin/x86_64-pc-linux-gnu-gcc-11.2.0  -g -O3 -g -o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/proc.c.o -c /home/grongo/Assignments/cps1012/src/proc.c",
-  "file": "/home/grongo/Assignments/cps1012/src/proc.c"
-},
-{
-  "directory": "/home/grongo/Assignments/cps1012/build",
-  "command": "/usr/bin/x86_64-pc-linux-gnu-gcc-11.2.0  -g -O3 -g -o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/tokenizer.c.o -c /home/grongo/Assignments/cps1012/src/tokenizer.c",
-  "file": "/home/grongo/Assignments/cps1012/src/tokenizer.c"
-},
-{
-  "directory": "/home/grongo/Assignments/cps1012/build",
-  "command": "/usr/bin/x86_64-pc-linux-gnu-gcc-11.2.0  -g -O3 -g -o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/parser.c.o -c /home/grongo/Assignments/cps1012/src/parser.c",
-  "file": "/home/grongo/Assignments/cps1012/src/parser.c"
-},
-{
-  "directory": "/home/grongo/Assignments/cps1012/build",
-  "command": "/usr/bin/x86_64-pc-linux-gnu-gcc-11.2.0  -g -O3 -g -o CMakeFiles/tish.dir/home/grongo/Assignments/cps1012/src/builtins.c.o -c /home/grongo/Assignments/cps1012/src/builtins.c",
-  "file": "/home/grongo/Assignments/cps1012/src/builtins.c"
+  "directory": "/Users/grongo/Assignments/cps1012/build",
+  "command": "/usr/bin/clang    -ggdb3 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -o CMakeFiles/tish.dir/Users/grongo/Assignments/cps1012/src/builtins.c.o -c /Users/grongo/Assignments/cps1012/src/builtins.c",
+  "file": "/Users/grongo/Assignments/cps1012/src/builtins.c"
 }
 ]
