@@ -44,7 +44,7 @@ int print_cwd() {
 }
 
 int clear_screen(char **args) {
-printf("\e[1;1H\e[2J");
+    printf("\e[1;1H\e[2J");
   return EXIT_SUCCESS;
 }
 

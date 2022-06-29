@@ -4,16 +4,6 @@
 #include "strings.h"
 #include <stdio.h>
 
-typedef enum TokenType {
-  STRING,
-  ARGUMENT,
-  PIPE,
-  SEMICOLON,
-  REDIRECT_IN,
-  REDIRECT_OUT,
-  APPEND
-} TokenType; // your time is near. not now however.
-
 typedef struct String {
   char *string;
   size_t size;
