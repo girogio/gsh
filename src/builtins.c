@@ -23,10 +23,12 @@ int change_dir(char **args) {
   if (argc > 2) {
     printf("cd: too many arguments\n");
   } else if (argc == 1) {
-    if (getenv("home"))
-      chdir(getenv("home"));
-  } else if (chdir(args[1]) == -1)
+    if (getenv("HOME") != NULL)
+      chdir(getenv("HOME"));
+  } else if (chdir(args[1]) == -1){
     perror("cd failed");
+    return EXIT_FAILURE;
+  }
 
   return EXIT_SUCCESS; // return this if succeded
 }
@@ -59,7 +61,7 @@ int show_info(char **args) {
 
        "😎\n\n\nplease consider supporting this project as i would love to a "
        "good grade.");
-  return 0;
+  return EXIT_SUCCESS;
 }
 
 int execute_builtin(char **args) {
