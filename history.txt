@@ -1,100 +1,25 @@
 ls -la
-make
-exit
-ls -la | wc -l | figlet
-exit
-clear
-ls
-ls -la
-clear
-ls -la | wc -l | figlet
-ls -la  > file_out
-cl
-clear
-ls
-clear
-ls -la | wc -l | ls
-ls -la | wc -l | figlet
-exit
-ver
-clear
-ls | wc -l
-exit
-e"cho"
-exit
-cl;
-clear
-cowsay >> as
-touch one two three
-rm one two three
-rm out
-rm vgcore.6841
-rm city_count.txt
-rm city_coun.txt
-rm file_out
-rm cities.txt
-rm cities_sorted.txt
-rm as
-rm city_cound.txt
-rm history.txt
-ls
-clear
-rm clear
-rm message.txt
 clear
 exit
-ls
-ls -la
-echo "test > funky stuff"
-echo "test \" > funky stuff"
-ls
-clear
-cl
-clear
+ls 0la
 ls -la
 cl
-clear
-ls
-cl
-clear
-exit
-ls -la | wc -l
-exit
-ls -la | wc -l
-exit
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l
-exit
-ls -la
-exit
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l | figlet
-exit
-ls -la
-exit
-ls -la
-exit
-ls -la | wc -l
-ls -la | wc -l | figlet
-exit
-ls -la | wc -l | exit
-exit
-ls -la
-ls -la | wc -l | eall
-exit
-alsdksad
-exit
-ls -la  | wc -l 
-ls -la  | wc -l  | figlet
-echo "A very weird string > < >> ! "
-echo "A very weird string > < >> ! " | figlet
-echo "A very weird string > \"< >> ! " | figlet
-echo "A very weird string > \"< >> ! " 
+ls bin
+cd ..
 cl
 l
+c
+lc
 clear
+ls
+cd buld
+ls build
+rm -rf build
+clear
+ls
+clear
+ls
 ls -la
-cd ..
-cd 
+clear
+exot
+exit

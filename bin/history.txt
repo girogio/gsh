@@ -1,0 +1,91 @@
+ls -la
+ls -la | wc -l
+ls -la | wc -l | figlet
+ls -la | wc -l | figlet ; ls -la
+exit
+-la
+ls -la
+exit
+ls
+clear
+ls
+clera
+clear
+sdnaosdn\
+sd
+asd
+as
+stding
+in
+i
+a
+da
+as
+cl
+clear
+ls
+clear
+ls
+ls -la
+exit
+lear
+clear
+ls -la
+cd asd
+cd time
+d asmd 
+cd ..
+cd
+echo
+echoa sd
+echo asdsad
+echo $HOME
+exit
+cd
+clear
+exit
+ls -la
+ls -la | wc -l | figlet
+echo "Meta chars: \" \\ < > >> \;|
+echo "Meta chars: \" \\ < > >> \;|"
+echo "Meta chars: \" \\ < > >> \; "
+ls 
+ls -la
+echo " asd as" 
+echo " asd a "" s" 
+"
+exit
+ -la
+ls -la
+echo "as da"
+/Users/grongo/Assignments/cps1012/build/tish 
+exit
+echo  """ 
+echo  "asdsd" 
+exit
+ls -la
+echo "bruh"
+exit
+echo "bruh"
+exit
+ls -la
+echo "bruh"
+exit
+echo "bruh"
+exit
+ls -la
+echo "bruh"
+echo "br\"u\"h"
+exit
+ls -la
+echo "brh"
+echo "brh""
+exit
+echo ""br8h"
+ls -la
+clera
+clear
+asdn lasd  "|| D|SD ""D "DS" D""
+asdn lasd  "|| D|SD ""D "DS" D"""
+clera
+clear

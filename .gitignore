@@ -1,5 +1,0 @@
-.vscode/*
-.cache/
-bin/*
-!bin/CMakeLists.txt
-src/tokenizer

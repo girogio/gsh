@@ -30,6 +30,7 @@
     "**/.vscode/**"
   ],
   "files.associations": {
-    "limits.h": "c"
+    "limits.h": "c",
+    "cstdlib": "c"
   }
 }

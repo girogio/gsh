@@ -55,8 +55,8 @@ bool redir_file_valid(char **array) {
 
 void do_pipeline(char *input) {
 
-  
 
+  
   Args *args = tokenize(input);
 
   char **tokens = args->args;
