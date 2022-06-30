@@ -1,12 +1,13 @@
 #pragma once
 #include "better_tokenizer.h"
 #include "builtins.h"
-#include "proc.h"
 #include "string.h"
+#include "proc.h"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 
 bool is_redir_tok(const char *s) {
   if (!strcmp(s, "<") | !strcmp(s, ">") | !strcmp(s, ">>"))

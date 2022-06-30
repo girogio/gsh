@@ -1,4 +1,4 @@
-#include "../src/tokenizer.c"
+#include "../src/better_tokenizer.h"
 
 int main(void) {
 
@@ -6,12 +6,13 @@ int main(void) {
 
   line = strdup("ls -la | wc -l | figlet");
 
-  char **tokenized_line = tokenize(line, " ");
+  Args *tokenized_line = tokenize(line);
+  char ***pipeline = tokenize_pipeline(tokenized_line->args);
 
-  char ***pipeline = tokenize_pipeline(tokenized_line);
+  print_args(tokenized_line);
 
   free_pipeline_tokens(pipeline);
-  free_tokens(tokenized_line);
+  free_args(tokenized_line);
   free(line);
 
   return 0;

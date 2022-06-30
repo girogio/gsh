@@ -1,5 +1,4 @@
 #pragma once
-#include "parser.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -212,7 +211,7 @@ int execute_pipeline_ex(char ***pipeline_args, bool async, char *file_in, char *
     if (child == -1) {
       perror("Fork failed!");
       exit(EXIT_FAILURE);
-    } else if (child == 0) {
+    } else if (child == 0) { // start executing in child
 
       if (stage < child_count - 1) { // is it not the end?
         close(current_fd[READ_END]);
@@ -220,7 +219,7 @@ int execute_pipeline_ex(char ***pipeline_args, bool async, char *file_in, char *
         close(current_fd[WRITE_END]);
       }
 
-      if (stage == pipe_count && file_out != NULL) // we in last stage?
+      if (stage == pipe_count && file_out != NULL) // are we in last stage?
         freopen(file_out, append_out ? "a" : "w", stdout);
 
       if (stage == 0 && file_in != NULL)
