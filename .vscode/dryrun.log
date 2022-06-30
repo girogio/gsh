@@ -1,6 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/grongo/Assignments/cps1012'
-make: Leaving directory `/Users/grongo/Assignments/cps1012'
- 
-make: *** No targets specified and no makefile found.  Stop.
-
