@@ -13,7 +13,7 @@ int update_prompt(char *PS1) {
 
   strcat(PS1, cwd);
 
-  strcat(PS1, " tish $ ");
+  strcat(PS1, " $ ");
 
   return EXIT_SUCCESS;
 }
