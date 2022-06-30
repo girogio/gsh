@@ -54,6 +54,9 @@ bool redir_file_valid(char **array) {
 }
 
 void do_pipeline(char *input) {
+
+  
+
   Args *args = tokenize(input);
 
   char **tokens = args->args;
@@ -124,6 +127,24 @@ void do_pipeline(char *input) {
 }
 
 void process_input(char *input) {
+
+  int quote_count = 0;
+
+  for(char *c = input; *c != '\0'; ++c){
+    if(*c == '\\'){
+      c++;
+    }
+    else{
+      if(*c == '\"')
+      quote_count++;
+    }
+  }
+
+  if(quote_count % 2 != 0){
+    printf("syntax error: mismatched quotes\n");
+    return;
+  }
+
   char *last_pipeline = input;
   for (char *c = input; *c; ++c) {
     if (*c == '\\' && *(c + 1) == ';') {
